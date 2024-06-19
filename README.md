@@ -77,6 +77,6 @@ O novo sistema ainda realiza as mesmas operações de antes, mas agora elas são
 
 ### 5. Criar Conta Corrente
 - O programa armazena as contas em uma lista.
-- Uma **Conta** é composta por: **agÊncia, número da conta, e usuário**.
+- Uma **Conta** é composta por: **agência, número da conta, e usuário**.
 - O número da conta é sequêncial, iniciando em 1. O número da agência é fixo: "0001".
 > ⚠️ **Um usuário pode ter mais de uma conta, mas uma conta pertence a apenas um usuário.**
