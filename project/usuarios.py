@@ -48,7 +48,8 @@ def criar_usuario():
     print("\n========= DADOS PESSOAIS =========")
     nome = input("Nome: ").strip()
     data_nascimento = input("Data de nascimento (dd/mm/aaaa): ").strip()
-    cpf = input("CPF: ").strip()
+    cpf_inicio = input("CPF: ").strip()
+    cpf = ''.join(filter(str.isdigit, cpf_inicio))
 
     if any(usuario['cpf'] == cpf for usuario in lista_usuarios):
         print("Usuário com esse CPF já cadastrado.")
@@ -84,7 +85,8 @@ def criar_conta_corrente():
     global numero_conta_incremetal
     print(MSG_CRIAR_CONTA_CORRENETE)
 
-    cpf = input("Digite o CPF do usuário: ").strip()
+    cpf_inicio = input("Digite o CPF do usuário: ").strip()
+    cpf = ''.join(filter(str.isdigit, cpf_inicio))
 
     usuario = next((usuario for usuario in lista_usuarios if usuario['cpf'] == cpf), None)
     if usuario is None:
@@ -115,7 +117,8 @@ def criar_conta_corrente():
 
 def login_usuario():
     
-    cpf = input("Digite o CPF do usuário: ").strip()
+    cpf_inicio = input("Digite o CPF do usuário: ").strip()
+    cpf = ''.join(filter(str.isdigit, cpf_inicio))
 
     usuario = next((usuario for usuario in lista_usuarios if usuario['cpf'] == cpf), None)
     if usuario is None:
